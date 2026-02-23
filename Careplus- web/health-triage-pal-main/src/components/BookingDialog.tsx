@@ -2,7 +2,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { CalendarIcon, CheckCircle } from "lucide-react";
 import type { Doctor } from "@/data/doctors";
-import { supabase } from "@/integrations/supabase/client";
+import { bookAppointment } from "@/lib/api";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -40,16 +40,14 @@ export function BookingDialog({ doctor, open, onOpenChange }: BookingDialogProps
     }
     setLoading(true);
     try {
-      const { data, error } = await supabase.from("appointments").insert({
+      const data = await bookAppointment({
         patient_name: name,
         patient_email: email,
         doctor_name: doctor.name,
         category: doctor.category,
         appointment_date: format(date, "yyyy-MM-dd"),
         time_slot: slot,
-      }).select("confirmation_id").single();
-
-      if (error) throw error;
+      });
       setConfirmationId(data.confirmation_id);
     } catch {
       toast({ title: "Booking failed. Please try again.", variant: "destructive" });

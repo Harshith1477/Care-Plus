@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { type LucideIcon } from "lucide-react";
+import { type LucideIcon, ArrowRight } from "lucide-react";
 
 interface CategoryCardProps {
   id: string;
@@ -9,35 +9,46 @@ interface CategoryCardProps {
   color: string;
 }
 
-const colorMap: Record<string, string> = {
-  "healthcare-teal": "bg-healthcare-teal/10 text-healthcare-teal border-healthcare-teal/20",
-  "healthcare-blue": "bg-healthcare-blue/10 text-healthcare-blue border-healthcare-blue/20",
-  "healthcare-red": "bg-healthcare-red/10 text-healthcare-red border-healthcare-red/20",
-  "healthcare-green": "bg-healthcare-green/10 text-healthcare-green border-healthcare-green/20",
-  "healthcare-orange": "bg-healthcare-orange/10 text-healthcare-orange border-healthcare-orange/20",
-  "healthcare-purple": "bg-healthcare-purple/10 text-healthcare-purple border-healthcare-purple/20",
+const iconBgMap: Record<string, string> = {
+  "healthcare-teal": "bg-healthcare-teal text-white",
+  "healthcare-blue": "bg-healthcare-blue text-white",
+  "healthcare-red": "bg-healthcare-red text-white",
+  "healthcare-green": "bg-healthcare-green text-white",
+  "healthcare-orange": "bg-healthcare-orange text-white",
+  "healthcare-purple": "bg-healthcare-purple text-white",
 };
 
-const iconBgMap: Record<string, string> = {
-  "healthcare-teal": "bg-healthcare-teal text-primary-foreground",
-  "healthcare-blue": "bg-healthcare-blue text-primary-foreground",
-  "healthcare-red": "bg-healthcare-red text-primary-foreground",
-  "healthcare-green": "bg-healthcare-green text-primary-foreground",
-  "healthcare-orange": "bg-healthcare-orange text-accent-foreground",
-  "healthcare-purple": "bg-healthcare-purple text-primary-foreground",
+const accentMap: Record<string, string> = {
+  "healthcare-teal": "text-healthcare-teal",
+  "healthcare-blue": "text-healthcare-blue",
+  "healthcare-red": "text-healthcare-red",
+  "healthcare-green": "text-healthcare-green",
+  "healthcare-orange": "text-healthcare-orange",
+  "healthcare-purple": "text-healthcare-purple",
 };
 
 export function CategoryCard({ id, name, icon: Icon, description, color }: CategoryCardProps) {
+  const iconCls = iconBgMap[color] ?? iconBgMap["healthcare-teal"];
+  const accentCls = accentMap[color] ?? accentMap["healthcare-teal"];
+
   return (
     <Link
       to={`/category/${id}`}
-      className={`group block rounded-xl border p-6 transition-all hover:shadow-lg hover:-translate-y-1 ${colorMap[color] || colorMap["healthcare-teal"]}`}
+      className="group block rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:-translate-y-1.5"
     >
-      <div className={`mb-4 inline-flex rounded-lg p-3 ${iconBgMap[color] || iconBgMap["healthcare-teal"]}`}>
+      {/* Icon */}
+      <div className={`mb-4 inline-flex rounded-xl p-3 ${iconCls}`}>
         <Icon className="h-6 w-6" />
       </div>
-      <h3 className="mb-1 font-display text-lg font-semibold text-foreground">{name}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+
+      {/* Text */}
+      <h3 className="mb-1.5 font-display text-lg font-semibold text-foreground">{name}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+
+      {/* Arrow */}
+      <div className={`mt-4 flex items-center gap-1 text-xs font-medium ${accentCls} opacity-0 group-hover:opacity-100 transition-opacity`}>
+        Learn more <ArrowRight className="h-3.5 w-3.5" />
+      </div>
     </Link>
   );
 }

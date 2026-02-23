@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 195 20% 98%;
-    --foreground: 210 25% 12%;
+    --background: 210 40% 96%;
+    --foreground: 215 28% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 25% 12%;
+    --card-foreground: 215 28% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 12%;
+    --popover-foreground: 215 28% 14%;
 
-    --primary: 174 62% 38%;
+    --primary: 196 80% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 30% 94%;
-    --secondary-foreground: 210 25% 12%;
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 215 28% 14%;
 
-    --muted: 195 15% 92%;
-    --muted-foreground: 210 10% 50%;
+    --muted: 210 25% 92%;
+    --muted-foreground: 215 14% 48%;
 
-    --accent: 35 90% 55%;
+    --accent: 196 80% 36%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 55%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 195 20% 88%;
-    --input: 195 20% 88%;
-    --ring: 174 62% 38%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 196 80% 36%;
 
     --radius: 0.75rem;
 
@@ -45,14 +45,14 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --healthcare-teal: 174 62% 38%;
-    --healthcare-teal-light: 174 50% 92%;
-    --healthcare-blue: 210 70% 50%;
-    --healthcare-blue-light: 210 60% 95%;
-    --healthcare-green: 150 50% 45%;
-    --healthcare-orange: 35 90% 55%;
-    --healthcare-red: 0 72% 55%;
-    --healthcare-purple: 260 50% 55%;
+    --healthcare-teal: 196 80% 36%;
+    --healthcare-teal-light: 196 60% 94%;
+    --healthcare-blue: 213 75% 50%;
+    --healthcare-blue-light: 213 60% 95%;
+    --healthcare-green: 152 55% 40%;
+    --healthcare-orange: 25 90% 54%;
+    --healthcare-red: 0 72% 51%;
+    --healthcare-purple: 258 52% 52%;
 
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -91,7 +91,25 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
+  }
+}
+
+/* Hero entrance animation */
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

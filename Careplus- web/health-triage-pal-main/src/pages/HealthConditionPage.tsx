@@ -40,7 +40,7 @@ export default function HealthConditionPage() {
             <Stethoscope className="h-5 w-5" />
           </Link>
           <div>
-            <h1 className="font-display text-xl font-bold text-foreground">STA</h1>
+            <h1 className="font-display text-xl font-bold text-foreground">Care Plus</h1>
             <p className="text-xs text-muted-foreground">Symptom Triage Assistant</p>
           </div>
         </div>
