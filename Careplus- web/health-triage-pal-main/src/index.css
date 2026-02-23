@@ -6,50 +6,51 @@
 
 @layer base {
   :root {
-    --background: 210 40% 96%;
-    --foreground: 215 28% 14%;
+    /* ── Hospital Theme: White + Green + Blue ── */
+    --background: 150 20% 97%;
+    --foreground: 210 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 14%;
+    --card-foreground: 210 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 14%;
+    --popover-foreground: 210 30% 12%;
 
-    --primary: 196 80% 36%;
+    --primary: 152 56% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 30% 94%;
-    --secondary-foreground: 215 28% 14%;
+    --secondary: 150 25% 93%;
+    --secondary-foreground: 210 30% 12%;
 
-    --muted: 210 25% 92%;
-    --muted-foreground: 215 14% 48%;
+    --muted: 150 15% 92%;
+    --muted-foreground: 210 12% 46%;
 
-    --accent: 196 80% 36%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 196 80% 36%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 152 56% 36%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 152 30% 96%;
+    --sidebar-foreground: 210 25% 18%;
+    --sidebar-primary: 152 56% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 93%;
+    --sidebar-accent-foreground: 210 25% 18%;
+    --sidebar-border: 150 15% 88%;
+    --sidebar-ring: 152 56% 36%;
 
-    --healthcare-teal: 196 80% 36%;
-    --healthcare-teal-light: 196 60% 94%;
-    --healthcare-blue: 213 75% 50%;
-    --healthcare-blue-light: 213 60% 95%;
-    --healthcare-green: 152 55% 40%;
+    --healthcare-teal: 168 60% 38%;
+    --healthcare-teal-light: 168 50% 94%;
+    --healthcare-blue: 217 91% 60%;
+    --healthcare-blue-light: 217 70% 95%;
+    --healthcare-green: 152 56% 36%;
     --healthcare-orange: 25 90% 54%;
     --healthcare-red: 0 72% 51%;
     --healthcare-purple: 258 52% 52%;
@@ -59,25 +60,25 @@
   }
 
   .dark {
-    --background: 210 25% 8%;
-    --foreground: 195 20% 95%;
-    --card: 210 25% 12%;
-    --card-foreground: 195 20% 95%;
-    --popover: 210 25% 12%;
-    --popover-foreground: 195 20% 95%;
-    --primary: 174 62% 45%;
+    --background: 160 15% 8%;
+    --foreground: 150 20% 95%;
+    --card: 160 15% 12%;
+    --card-foreground: 150 20% 95%;
+    --popover: 160 15% 12%;
+    --popover-foreground: 150 20% 95%;
+    --primary: 152 56% 42%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 20% 18%;
-    --secondary-foreground: 195 20% 95%;
-    --muted: 210 15% 20%;
-    --muted-foreground: 210 10% 60%;
-    --accent: 35 90% 55%;
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 150 20% 95%;
+    --muted: 160 10% 20%;
+    --muted-foreground: 150 10% 60%;
+    --accent: 217 80% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 210 20% 22%;
-    --input: 210 20% 22%;
-    --ring: 174 62% 45%;
+    --border: 160 12% 22%;
+    --input: 160 12% 22%;
+    --ring: 152 56% 42%;
   }
 }
 

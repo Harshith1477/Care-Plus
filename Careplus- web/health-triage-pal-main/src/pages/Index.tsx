@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Stethoscope } from "lucide-react";
 import { categories } from "@/data/categories";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
 
 const CYCLING_WORDS = [
   "Simplified",
@@ -56,22 +56,11 @@ const Index = () => {
   const EASE = "opacity 0.45s ease-out, transform 0.45s ease-out";
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="container mx-auto flex items-center gap-3 px-4 py-4">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Stethoscope className="h-5 w-5" />
-          </div>
-          <div>
-            <h1 className="font-display text-xl font-bold text-foreground">Care Plus</h1>
-            <p className="text-xs text-muted-foreground">Your Health, Simplified</p>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(160deg, #e8f5e9 0%, #e3f2fd 25%, #f1f8e9 50%, #e8eaf6 75%, #e0f2f1 100%)' }}>
+      <Navbar />
 
       {/* Hero */}
-      <section className="container mx-auto px-4 py-12 lg:py-16">
+      <section className="container mx-auto px-4 py-12 lg:py-16" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 30%, #ffffff 60%, #f1f8e9 100%)' }}>
         <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
 
           {/* LEFT — text content */}
@@ -144,7 +133,7 @@ const Index = () => {
               </a>
               <button
                 onClick={() => document.querySelector<HTMLButtonElement>(".fixed.bottom-6.right-6")?.click()}
-                className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-6 py-3 text-sm font-semibold text-foreground shadow-sm hover:border-primary hover:text-primary transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-xl border border-green-200 bg-white px-6 py-3 text-sm font-semibold text-green-700 shadow-sm hover:border-green-400 hover:text-green-800 transition-all hover:-translate-y-0.5"
               >
                 Book via AI Assistant
               </button>
@@ -181,7 +170,7 @@ const Index = () => {
 
             {/* Floating badge — top left */}
             <div className="absolute -top-4 -left-4 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-xl border border-border">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white text-lg">🩺</div>
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-green-600 text-white text-lg">🩺</div>
               <div>
                 <p className="text-xs font-bold text-foreground">200+ Doctors</p>
                 <p className="text-xs text-muted-foreground">Available now</p>
@@ -202,7 +191,7 @@ const Index = () => {
       </section>
 
       {/* Categories */}
-      <section className="container mx-auto px-4 pb-16">
+      <section className="container mx-auto px-4 pb-16" style={{ background: 'linear-gradient(180deg, #ffffff 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <h3 className="mb-6 font-display text-lg font-semibold text-foreground">
           Browse by Health Conditions
         </h3>
