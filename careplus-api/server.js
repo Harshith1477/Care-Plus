@@ -3,6 +3,9 @@ import express from "express";
 import cors from "cors";
 import { createAppointment } from "./db.js";
 import { chatWithGemini } from "./chat.js";
+import { initFirebaseAdmin } from "./firebaseAdmin.js";
+
+initFirebaseAdmin();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
